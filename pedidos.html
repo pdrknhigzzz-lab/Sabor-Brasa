@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+  <!--Inicio do card de pedidos-->
+   <section class="pedidos">
+
+    <h2>FAÇA SEU PEDIDO</h2>
+    <p>Escolha seu hambúrguer e faça seu pedido!</p>
+    
+    <div class="cards-3">
+
+        <div class="card-3">
+            
+            <img src="./img/terceiraimg.png" alt="X-Salada">
+
+            <h3>X-Salada</h3>
+
+            <p>Pão, hambúrguer, queijo, alface, tomate e molho especial.</p>
+
+            <h4>R$ 18,00</h4>
+            <form action="pedidos.php" method="POST">
+                <input type="hidden" name="produto" value="X-Salada">
+            
+                <input type="number" name="quantidade"
+                min="1" max="20" value="1" required>
+            
+                <button class="botao11" >Fazer pedido</button>
+            </form>
+            
+        </div>
+
+ 
+        <div class="card-3">
+           <img class="imgg"  src="./img/x-bacon.png" alt="X-Bacon">
+
+            <h3>X-Bacon</h3>
+
+            <p>Pão, hambúrguer, queijo, bacon, alface, tomate e molho.</p>
+
+            <h4>R$ 22,00</h4>
+            <form action="pedidos.php" method="POST">
+                <input type="hidden" name="produto" value="X-Bacon">
+            
+                <input id="quantidade" type="number" name="quantidade"
+                min="1" max="20" value="1" required>
+            
+                <button id="botao22" class="botao11"  >Fazer pedido</button>
+            </form>
+            
+        </div>
+
+
+        <div class="card-3">
+            <img src="./img/classico.png" alt="Clássico">
+
+            <h3>Clássico</h3>
+
+            <p>Pão, hambúrguer, queijo, alface, tomate e molho especial.</p>
+
+            <h4>R$ 20,00</h4>
+            <form action="pedidos.php" method="POST">
+                <input type="hidden" name="produto" value="Clássico">
+            
+                <input type="number" name="quantidade"
+                min="1" max="20" value="1" required>
+            
+                 <button class="botao11">Fazer pedido</button>
+            </form>
+           
+        </div>
+
+    </div>
+
+</section>
+   <!--FIm do card de pedidos-->
+</body>
+</html>
