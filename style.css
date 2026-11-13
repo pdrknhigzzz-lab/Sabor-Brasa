@@ -1,0 +1,1037 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    
+   
+    font-family: 'roboto',sans-serif;
+      
+}
+
+    
+
+
+h1 {
+    color: #F7F4EF; 
+    font-size: 45px;
+}
+/*inicio da lista*/
+
+.nav {
+    background-color:black;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    z-index: 9;
+   line-break:normal;
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 28px;
+}
+.nav-list a{
+    text-decoration: none;
+    color:#9c5224 ;
+    padding: 20px;
+    
+}
+.nav-list a:hover{
+    color: #e95b03;
+    
+    
+}
+/*fim da lista*/
+
+/*inicio da primeira pagina*/
+
+.titulo i{
+    color: #CCCCCC;
+    margin-top: 100px;
+    margin-bottom: 35px;
+    font-size: 20px;
+    margin-left: 200px;
+
+}
+ 
+img {
+    
+    border-radius: 8px;
+    margin-left: 700px;
+    height: 300px;
+    width: 700px;
+    margin-bottom: 30px;
+}
+ .titulo h1{
+   
+    margin-left: 200px;
+    
+ }
+
+.titulo{
+    
+    background-color: #110D0B;
+    
+    
+}
+.botao{
+    cursor: pointer;
+    background-color: #E58100;
+    border: 0;
+    padding: 14px;
+    border-radius: 4px;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+   margin-left: 200px;
+   margin-top: 20px;
+
+
+
+}
+.botao11 {
+    display: block;
+    width: 120px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #E87521;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+#botao22 {
+    margin-top: px;
+
+}
+#quantidade {
+    margin-top: 25px;
+}
+.botao:hover {
+    background-color: #c85c12;
+}
+a{
+    text-decoration: none;
+    color: #fcfbfb;
+}
+
+.logo{
+    margin-right: 1400px;
+    width: 80px;
+    height: 80px;
+}
+
+/*fim da primeira pagina*/
+
+
+/*inicio do cardapio*/
+
+.cardapio{
+    display: flex;
+    color: #E58100;
+    font-size: 20px;
+    background-color: #FAF6F0;
+    text-align: center;
+    gap: 100px;
+   
+}
+.cardapio h2{
+margin-left: 900px;
+font-size: 40px;
+margin-top: 100px;
+}
+
+.cardapio i{
+    color: #afadad;
+    font-size: 20px;
+    
+    
+
+
+    /*Inicio do card*/
+}
+.card{
+    width: 300px;
+    padding: 24px;
+    border: 2px solid #2B1B17;
+    border-radius: 12px;
+    background-color: #222222;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    margin-left: -20px;
+    
+   
+}
+.img{
+    height: 200px;
+    width: 250px;
+    margin-left: 4px;
+
+}
+.card h2{
+    color: #FAF6F0;
+    margin-left: 10px;
+}
+
+#card-1{
+    
+    margin-left: -700px;
+    
+}
+/*fim do cardapio*/
+
+
+    /*inicio das informações*/
+
+.informações{
+    background-color: #2B1B14;
+    
+}
+.informações h2 {
+    color: #D96B27;
+    margin-left: 890px;
+    margin-top: 80px;
+    font-size: 40px;
+
+}
+.img-2{
+    margin-left: 100px;
+    height: 400px;
+    margin-top: -50px;
+}
+.informações p{
+    color: #D1C7BD;
+    margin-left: 900px;
+    margin-bottom: -90px;
+   
+    
+}
+/*fim das informações*/
+
+/*começo rodape*/
+
+.rodape {
+    width: 100%;
+    background: #0d0907;
+    color: #ffffff;
+    padding: 55px 0;
+    box-sizing: border-box;
+}
+
+.rodape-conteudo {
+    width: 75%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 150px;
+}
+
+
+
+
+.rodape-marca {
+    border-left: 3px solid #e76f20;
+    padding-left: 25px;
+    flex: 1;
+}
+
+.rodape-marca h2 {
+    margin: 0 0 5px;
+
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+.rodape-marca h2 span {
+    color: #e76f20;
+}
+
+.rodape-marca .subtitulo {
+    margin: 0 0 15px;
+
+    color: #e76f20;
+
+    font-size: 13px;
+    
+    font-weight: bold;
+}
+
+.rodape-marca p {
+    margin: 8px 0;
+
+    font-size: 16px;
+}
+
+.rodape-marca small {
+    display: block;
+
+    margin-top: 18px;
+
+    color: #999;
+
+    font-size: 13px;
+    
+}
+
+
+
+
+.rodape-atendimento {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.rodape-atendimento h3 {
+    margin: 0 0 22px;
+
+    color: #e76f20;
+
+    font-size: 17px;
+    
+}
+
+.rodape-atendimento p {
+    margin: 0 0 15px;
+
+    color: #ddd;
+
+    font-size: 14px;
+    
+}
+
+/*fim rodape*/
+
+/*login*/
+body {
+    background-color: #241711;
+    font-family: Arial, sans-serif;
+}
+
+.caixa-login {
+    width: 320px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.h11{
+    text-align: center;
+    color: #e76f20;
+}
+
+.caixa-login p {
+    text-align: center;
+    color: #555;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.Entrar{
+    width: 100%;
+    padding: 11px;
+    margin-top: 20px;
+
+    background-color: #e76f20;
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.Entrar:hover {
+    background-color: #c95710;
+}
+
+.conta {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.aa {
+    color: #e76f20;
+    text-decoration: none;
+}
+
+.voltar {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #E58100;
+}
+/*fim login*/
+
+/*cadastro*/
+body {
+    background-color: #241711;
+    font-family: Arial, sans-serif;
+}
+
+.caixa-login {
+    width: 320px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.texto-2 {
+    text-align: center;
+    color: #e76f20;
+}
+
+.caixa-login p {
+    text-align: center;
+    color: #555;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.butao-2{
+    width: 100%;
+    padding: 11px;
+    margin-top: 20px;
+
+    background-color: #e76f20;
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.butao-2:hover {
+    background-color: #c95710;
+}
+
+.conta {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.voltar{
+    color: #e76f20;
+    text-decoration: none;
+}
+
+.voltar {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+/*Fim do cadastro*/
+
+/*inicio pedidos*/
+.pedidos {
+    background-color: #241711;
+    padding: 50px 30px;
+    text-align: center;
+    color: white;
+}
+
+.pedidos h2 {
+    color: #e76f20;
+    font-size: 32px;
+}
+
+.pedidos p {
+    font-size: 16px;
+}
+
+.cards-3 {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card-3 {
+    background-color: #f5f5f5;
+    color: #241711;
+    width: 250px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    
+}
+
+.card-3 img {
+    width: 100%;
+    margin-left: 0px;
+    height: 200px;
+    
+}
+
+.card-3 h3 {
+    color: #e76f20;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card-3 h4 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.card-3 a {
+    
+    background-color: #e76f20;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card-3 a:hover {
+    background-color: #c95512;
+}
+
+/*Fim dos pedidos*/
+
+/*responsividade*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+   
+
+    .nav {
+        width: 100%;
+        height: auto;
+        min-height: 80px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        width: 75px;
+        height: 75px;
+        margin: 0 20px;
+    }
+
+    .nav-list {
+        margin-right: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-list a {
+        padding: 12px;
+    }
+
+    
+
+    .titulo {
+        width: 100%;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .titulo h1 {
+        margin: 0;
+        font-size: 38px;
+    }
+
+    .titulo i {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .titulo img {
+        display: block;
+        width: 90%;
+        max-width: 650px;
+        height: auto;
+        margin: 25px auto;
+    }
+
+    .botao {
+        margin: 15px auto;
+    }
+
+   
+
+    .cardapio {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        padding: 30px 15px;
+    }
+
+    .cardapio > h2 {
+        width: 100%;
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .card {
+        width: 280px;
+        max-width: 100%;
+        margin: 15px 0;
+    }
+
+    #card-1 {
+        margin-left: 0;
+    }
+
+    .img {
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+    
+
+    .informações {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .informações h2 {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .informações p {
+        max-width: 600px;
+        margin: 20px auto;
+        text-align: center;
+        line-height: 1.7;
+    }
+
+    .img-2 {
+        display: block;
+        width: 80%;
+        max-width: 450px;
+        height: auto;
+        margin: 30px auto;
+    }
+
+    
+
+    .rodape-conteudo {
+        width: 90%;
+        gap: 40px;
+    }
+
+    
+
+    .cards-3 {
+        max-width: 800px;
+        margin: 30px auto;
+        gap: 20px;
+    }
+
+    .card-3 {
+        width: 230px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+   
+
+    .nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto;
+    }
+
+    .nav-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-list li {
+        list-style: none;
+    }
+
+    .nav-list a {
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+   
+
+    .titulo {
+        width: 100%;
+        min-height: 400px;
+        height: auto;
+        padding: 45px 15px;
+        text-align: center;
+    }
+
+    .titulo h1 {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .titulo i {
+        font-size: 16px;
+        margin: 20px 0;
+    }
+
+    .titulo img {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .botao {
+        display: inline-block;
+        margin: 15px auto;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+   
+
+    .cardapio {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .cardapio > h2 {
+        width: 100%;
+        font-size: 28px;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 350px;
+        margin: 10px auto;
+        padding: 20px;
+    }
+
+    #card-1 {
+        margin-left: auto;
+    }
+
+    .card .img {
+        display: block;
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+    .card h2 {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    
+
+    .informações {
+        width: 100%;
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    .informações h2 {
+        font-size: 28px;
+        margin: 20px 0;
+    }
+
+    .informações p {
+        width: 100%;
+        margin: 15px auto;
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    .img-2 {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 25px auto;
+    }
+
+    
+
+    .pedidos {
+        width: 100%;
+        padding: 35px 15px;
+    }
+
+    .pedidos h2 {
+        font-size: 27px;
+    }
+
+    .cards-3 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin: 30px auto;
+    }
+
+    .card-3 {
+        width: 90%;
+        max-width: 350px;
+        min-height: 420px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .card-3 img {
+        width: 100%;
+        height: 200px;
+        margin: 0 auto 15px;
+        object-fit: cover;
+    }
+
+    .card-3 form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: auto;
+    }
+
+    .card-3 input[type="number"] {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .botao11 {
+        width: 100%;
+        max-width: 180px;
+        margin: 10px auto;
+    }
+
+    
+
+    .rodape {
+        width: 100%;
+        padding: 35px 15px;
+    }
+
+    .rodape-conteudo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .rodape-marca {
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
+        border-left: none;
+    }
+
+    .rodape-atendimento {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    
+
+    .caixa-login {
+        width: 90%;
+        max-width: 400px;
+        margin: 40px auto;
+        padding: 25px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+   
+
+    .nav-list {
+        gap: 0;
+    }
+
+    .nav-list a {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+   
+
+    .titulo {
+        padding: 35px 10px;
+    }
+
+    .titulo h1 {
+        font-size: 25px;
+    }
+
+    .titulo i {
+        font-size: 14px;
+    }
+
+    
+
+    .cardapio > h2 {
+        font-size: 25px;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    
+
+    .pedidos {
+        padding: 30px 10px;
+    }
+
+    .pedidos h2 {
+        font-size: 23px;
+    }
+
+    .pedidos p {
+        font-size: 14px;
+    }
+
+    .card-3 {
+        width: 95%;
+        min-height: 400px;
+    }
+
+    .card-3 img {
+        height: 180px;
+    }
+
+    .botao11 {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+   
+
+    .informações h2 {
+        font-size: 24px;
+    }
+
+    .informações p {
+        font-size: 14px;
+    }
+
+    
+
+    .rodape-marca h2 {
+        font-size: 24px;
+    }
+
+    .rodape-atendimento h3 {
+        font-size: 16px;
+    }
+
+    
+
+    .caixa-login {
+        width: 92%;
+        padding: 20px 15px;
+    }
+
+
+
+}
