@@ -1,4 +1,5 @@
 
+
 <?php
 
 session_start();
@@ -12,10 +13,12 @@ if (!isset($_SESSION["id"])) {
 
 // Verificar se os dados foram enviados
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     $nome = $_SESSION["nome"];
     $usuario_id = $_SESSION["id"];
-    $produto = $_POST["produto"];
-    $quantidade = (int) $_POST["quantidade"];
+
+    $produto = $_POST["produto"] ?? "";
+    $quantidade = (int) ($_POST["quantidade"] ?? 0);
 
     // Verificar a quantidade
     if ($quantidade < 1 || $quantidade > 20) {
@@ -37,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $dados = $resultado->fetch_assoc();
-    
+
     $produto_id = $dados["id"];
     $preco = $dados["preco"];
 
@@ -50,17 +53,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
 
         // Inserir pedido
-$pedido = $conexao->prepare(
-    "INSERT INTO pedidos (usuario_id, nome, total)
-     VALUES (?, ?, ?)"
-);
+        $pedido = $conexao->prepare(
+            "INSERT INTO pedidos (usuario_id, nome, total)
+             VALUES (?, ?, ?)"
+        );
 
-$pedido->bind_param("isd", $usuario_id, $nome, $total);
+        $pedido->bind_param("isd", $usuario_id, $nome, $total);
 
-$pedido->execute();
+        $pedido->execute();
 
-// Pegar o ID do pedido
-$pedido_id = $conexao->insert_id;
+        // Pegar o ID do pedido
+        $pedido_id = $conexao->insert_id;
 
         // Inserir item do pedido
         $item = $conexao->prepare(
@@ -86,9 +89,9 @@ $pedido_id = $conexao->insert_id;
         echo "<h2>Pedido realizado com sucesso!</h2>";
 
         echo "<p>Cliente: " .
-        htmlspecialchars($_SESSION["nome"]) . "</p>";
+        htmlspecialchars($nome) . "</p>";
 
-        echo "<p>Hambúrguer: " .
+        echo "<p>Produto: " .
         htmlspecialchars($dados["nome"]) . "</p>";
 
         echo "<p>Quantidade: " . $quantidade . "</p>";
@@ -121,3 +124,4 @@ $pedido_id = $conexao->insert_id;
 }
 
 ?>
+
