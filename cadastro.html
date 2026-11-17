@@ -16,33 +16,40 @@
 <!--card de cadastro-->
 <body>
 
-    <div class="caixa-login">
+    
+<div class="caixa-login">
 
-        <h1 class="texto-2"> 🍔Sabor & Brasa</h1>
-        <p>Crie sua conta</p>
+    <h1 class="texto-2">🍔Sabor & Brasa</h1>
+    <p>Crie sua conta</p>
 
-       <form action="cadastro.php" method="POST">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" placeholder="Nome" required>
-           
-            <label for="email">E-mail</label>
-            <input type="email" name="email" placeholder="E-mail" required>
-            
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" placeholder="Senha" required>
-        
-            <label for="confirmar">Confirmar Senha</label>
-            <input type="password" name="confirmar_senha" placeholder="Confirmar senha" required>
-        
-            <button class="butao-2" type="submit">Cadastrar</button>
-        
-        </form>
-       
+    <form action="cadastro.php" method="POST">
 
-        <a href="index.html" class="voltar"> Voltar para o site</a>
-        
-    </div>
-<!--fim do card-->
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" placeholder="Nome">
+        <small></small>
+
+        <label for="email">E-mail</label>
+        <input type="email" name="email" placeholder="E-mail">
+        <small></small>
+
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" placeholder="Senha">
+        <small></small>
+
+        <label for="confirmar">Confirmar Senha</label>
+        <input type="password" name="confirmar_senha" placeholder="Confirmar senha">
+        <small></small>
+
+        <button class="butao-2" type="submit">Cadastrar</button>
+
+    </form>
+
+    <a href="index.html" class="voltar">Voltar para o site</a>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
 </body>

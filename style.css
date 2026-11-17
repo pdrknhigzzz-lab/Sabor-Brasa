@@ -388,6 +388,21 @@ input {
     margin-top: 15px;
     color: #E58100;
 }
+
+.caixa-login input.invalido {
+    border: 2px solid #e53935 !important;
+    background-color: #fff0f0 !important;
+}
+
+.caixa-login .erro {
+    color: #e53935 !important;
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
 /*fim login*/
 
 /*cadastro*/
