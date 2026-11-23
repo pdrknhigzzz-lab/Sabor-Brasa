@@ -54,74 +54,95 @@ h1 {
 
 /*inicio da primeira pagina*/
 
-.titulo i{
-    color: #CCCCCC;
-    margin-top: 100px;
-    margin-bottom: 35px;
-    font-size: 20px;
-    margin-left: 200px;
 
+
+
+.titulo {
+    width: 100%;
+    min-height: 550px;
+    padding: 70px 7.5%;
+    background: linear-gradient(110deg, #160F0B, #2B1B14);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
 }
- 
-img {
-    
-    border-radius: 8px;
-    margin-left: 700px;
-    height: 300px;
-    width: 700px;
-    margin-bottom: 30px;
+
+
+
+.hero-conteudo {
+    flex: 1;
+    max-width: 600px;
 }
- .titulo h1{
-   
-    margin-left: 200px;
-    
- }
 
-.titulo{
-    
-    background-color: #110D0B;
-    
-    
-}
-.botao{
-    cursor: pointer;
-    background-color: #E58100;
-    border: 0;
-    padding: 14px;
-    border-radius: 4px;
-    font-size: 18px;
-    text-align: center;
-    justify-content: center;
-   margin-left: 200px;
-   margin-top: 20px;
-
-
-
-}
-.botao11 {
+.destaque {
     display: block;
-    width: 120px;
-    margin: 10px auto;
-    padding: 10px;
-    background-color: #E87521;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    font-size: 16px;
-    box-sizing: border-box;
+    color: #E58100;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
 }
-#botao22 {
-    margin-top: px;
 
+.titulo h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #FAF6F0;
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 25px;
 }
-#quantidade {
-    margin-top: 25px;
+
+.titulo p {
+    color: #D1C7BD;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 500px;
 }
-.botao:hover {
-    background-color: #c85c12;
+
+
+
+.titulo .botaoo {
+    display: inline-block;
+    background-color: #E58100;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
 }
+
+.titulo .botao:hover {
+    background-color: #C85C12;
+    transform: translateY(-3px);
+}
+
+
+
+.hero-imagem {
+    flex: 1.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-imagem img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 18px;
+    margin: 0;
+}
+
+
+
+
 a{
     text-decoration: none;
     color: #fcfbfb;
@@ -136,7 +157,7 @@ a{
 /*fim da primeira pagina*/
 
 
-/* CORREÇÃO DO CARDÁPIO */
+/* começo do cardápio */
 
 .cardapio {
     display: block;
@@ -186,7 +207,6 @@ a{
     margin: 0;
     font-size: 25px;
 }
-
 
 
     /*inicio das informações*/
@@ -479,6 +499,9 @@ input {
 /*Fim do cadastro*/
 
 /*inicio pedidos*/
+
+
+
 .pedidos {
     background-color: #241711;
     padding: 50px 30px;
@@ -511,14 +534,14 @@ input {
     border-radius: 10px;
     text-align: center;
     box-sizing: border-box;
-    
 }
 
 .card-3 img {
     width: 100%;
-    margin-left: 0px;
     height: 200px;
-    
+    object-fit: cover;
+    margin: 0;
+    border-radius: 5px;
 }
 
 .card-3 h3 {
@@ -532,17 +555,60 @@ input {
     margin: 15px 0;
 }
 
-.card-3 a {
-    
-    background-color: #e76f20;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
+
+
+.card-3 input[type="number"] {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 
-.card-3 a:hover {
+
+
+.card-3 button.botao11 {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background-color: #e76f20;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-3 button.botao11:hover {
     background-color: #c95512;
+    transform: translateY(-3px);
+}
+
+
+
+.voltar {
+    position: absolute !important;
+    top: 5px !important;
+    left: 10px !important;
+    display: inline-block !important;
+    background-color: #E76F20 !important;
+    color: white !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.voltar:hover {
+    background-color: #C95712 !important;
+    transform: translateX(-4px);
 }
 
 /*Fim dos pedidos*/
@@ -603,26 +669,28 @@ img {
 
     .titulo {
         width: 100%;
-        padding: 40px 20px;
+        height: auto;
+        min-height: 0;
+        padding: 35px 15px 20px;
         text-align: center;
     }
-
+    
     .titulo h1 {
+        font-size: 30px;
         margin: 0;
-        font-size: 38px;
     }
-
+    
     .titulo i {
-        display: block;
+        font-size: 16px;
         margin: 20px 0;
     }
-
+    
     .titulo img {
         display: block;
-        width: 90%;
-        max-width: 650px;
+        width: 100%;
+        max-width: 450px;
         height: auto;
-        margin: 25px auto;
+        margin: 20px auto 0;
     }
 
     .botao {
@@ -1009,6 +1077,101 @@ img {
         padding: 20px 15px;
     }
 
+    @media (max-width: 768px) {
 
+        .voltar {
+            position: relative;
+            top: auto;
+            left: auto;
+    
+            margin: 15px;
+            padding: 10px 15px;
+    
+            font-size: 14px;
+        }
+    
+    }
+    
+    @media (max-width: 480px) {
+    
+        .voltar {
+            font-size: 13px;
+            padding: 9px 12px;
+        }
+    
+    }
 
-}
+    @media (max-width: 768px) {
+        .voltar {
+            position: relative;
+            top: auto;
+            left: auto;
+            margin: 15px;
+        }
+        }
+        @media (max-width: 768px) {
+            .voltar {
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                margin: 15px !important;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .titulo {
+                height: auto;
+                min-height: 0;
+                padding-bottom: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+
+        .titulo {
+            flex-direction: column;
+            text-align: center;
+            padding: 55px 20px;
+            gap: 35px;
+        }
+    
+        .titulo h1 {
+            font-size: 40px;
+        }
+    
+        .titulo p {
+            font-size: 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .hero-imagem img {
+            max-width: 500px;
+            height: 280px;
+        }
+    }
+    
+    
+    
+    @media screen and (max-width: 480px) {
+    
+        .titulo {
+            padding: 45px 15px;
+        }
+    
+        .titulo h1 {
+            font-size: 32px;
+        }
+    
+        .titulo p {
+            font-size: 14px;
+        }
+    
+        .hero-imagem img {
+            height: 220px;
+        }
+    
+        .titulo .botao {
+            padding: 13px 22px;
+            font-size: 14px;
+        }
+    }

@@ -1,6 +1,6 @@
 
 <?php
-
+// conectar os bancos
 $servidor = "localhost";
 $usuario = "root";
 $senha = "";

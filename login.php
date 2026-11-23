@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = $conexao->prepare(
         "SELECT * FROM usuarios WHERE email = ?"
     );
-
+// verifica se existe cadastro repetido
     $sql->bind_param("s", $email);
     $sql->execute();
 

@@ -1,6 +1,11 @@
 
-
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 session_start();
 include "conexao.php";
@@ -11,61 +16,66 @@ if (!isset($_SESSION["id"])) {
     <a href='login.html'>Fazer login</a>");
 }
 
-// Verificar se os dados foram enviados
+// Verificar se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $nome = $_SESSION["nome"];
-    $usuario_id = $_SESSION["id"];
+    $nome = $_SESSION["nome"] ?? "";
+    $usuario_id = (int) $_SESSION["id"];
 
     $produto = $_POST["produto"] ?? "";
     $quantidade = (int) ($_POST["quantidade"] ?? 0);
 
-    // Verificar a quantidade
+    if ($nome === "") {
+        die("Nome do cliente não encontrado na sessão. Faça login novamente.");
+    }
+
     if ($quantidade < 1 || $quantidade > 20) {
         die("Quantidade inválida!");
     }
 
-    // Buscar o produto no banco
-    $sql = $conexao->prepare(
-        "SELECT id, nome, preco FROM produtos WHERE nome = ?"
-    );
-
-    $sql->bind_param("s", $produto);
-    $sql->execute();
-
-    $resultado = $sql->get_result();
-
-    if ($resultado->num_rows == 0) {
-        die("Produto não encontrado!");
-    }
-
-    $dados = $resultado->fetch_assoc();
-
-    $produto_id = $dados["id"];
-    $preco = $dados["preco"];
-
-    // Calcular o valor total
-    $total = $preco * $quantidade;
-
-    // Iniciar transação
-    $conexao->begin_transaction();
+    $transacaoIniciada = false;
 
     try {
 
-        // Inserir pedido
+        // Buscar produto
+        $sql = $conexao->prepare(
+            "SELECT id, nome, preco FROM produtos WHERE nome = ?"
+        );
+
+        $sql->bind_param("s", $produto);
+        $sql->execute();
+
+        $resultado = $sql->get_result();
+
+        if ($resultado->num_rows == 0) {
+            $sql->close();
+            die("Produto não encontrado no banco de dados!");
+        }
+
+        $dados = $resultado->fetch_assoc();
+        $sql->close();
+
+        $produto_id = (int) $dados["id"];
+        $preco = (float) $dados["preco"];
+
+        $total = $preco * $quantidade;
+
+        // Iniciar transação
+        $conexao->begin_transaction();
+        $transacaoIniciada = true;
+
+        // Registrar pedido
         $pedido = $conexao->prepare(
             "INSERT INTO pedidos (usuario_id, nome, total)
              VALUES (?, ?, ?)"
         );
 
         $pedido->bind_param("isd", $usuario_id, $nome, $total);
-
         $pedido->execute();
 
-        // Pegar o ID do pedido
         $pedido_id = $conexao->insert_id;
 
-        // Inserir item do pedido
+        // Registrar item do pedido
         $item = $conexao->prepare(
             "INSERT INTO itens_pedido
             (pedido_id, produto_id, quantidade, preco_unitario)
@@ -82,40 +92,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $item->execute();
 
-        // Salvar no banco
+        // Confirmar gravação
         $conexao->commit();
+        $transacaoIniciada = false;
 
-        // Mostrar confirmação
         echo "<h2>Pedido realizado com sucesso!</h2>";
 
         echo "<p>Cliente: " .
-        htmlspecialchars($nome) . "</p>";
+             htmlspecialchars($nome, ENT_QUOTES, 'UTF-8') .
+             "</p>";
 
         echo "<p>Produto: " .
-        htmlspecialchars($dados["nome"]) . "</p>";
+             htmlspecialchars($dados["nome"], ENT_QUOTES, 'UTF-8') .
+             "</p>";
 
         echo "<p>Quantidade: " . $quantidade . "</p>";
 
         echo "<p>Preço unitário: R$ " .
-        number_format($preco, 2, ',', '.') . "</p>";
+             number_format($preco, 2, ',', '.') .
+             "</p>";
 
         echo "<h3>Total: R$ " .
-        number_format($total, 2, ',', '.') . "</h3>";
+             number_format($total, 2, ',', '.') .
+             "</h3>";
 
         echo "<a href='index.html'>Voltar ao site</a>";
 
         $pedido->close();
         $item->close();
 
-    } catch (Exception $erro) {
+    } catch (Throwable $erro) {
 
-        $conexao->rollback();
+        if ($transacaoIniciada) {
+            $conexao->rollback();
+        }
 
-        echo "Erro ao realizar o pedido!";
+        echo "<h2>Erro ao realizar o pedido</h2>";
+        echo "<pre>";
+        echo htmlspecialchars(
+            $erro->getMessage(),
+            ENT_QUOTES,
+            'UTF-8'
+        );
+        echo "</pre>";
 
     }
-
-    $sql->close();
 
 } else {
 
@@ -124,4 +145,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
+
 
