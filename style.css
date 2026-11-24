@@ -1,65 +1,79 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 0;
 }
-html{
+
+html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+
 body {
-    
-   
-    font-family: 'roboto',sans-serif;
-      
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FAF6F0;
+    overflow-x: hidden;
 }
 
-    
-
-
-h1 {
-    color: #F7F4EF; 
-    font-size: 45px;
+img {
+    max-width: 100%;
+    display: block;
 }
-/*inicio da lista*/
+
+/* MENU */
+
+#header {
+    width: 100%;
+    background-color: #100B08;
+}
 
 .nav {
-    background-color:black;
-    height: 80px;
     width: 100%;
+    min-height: 85px;
+    padding: 0 7%;
     display: flex;
-    justify-content: flex-end;
-    top: 0;
-    z-index: 9;
-   line-break:normal;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    transform: translateX(-125px);
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
 .nav-list {
     display: flex;
     align-items: center;
+    gap: 35px;
     list-style: none;
-    margin-right: 28px;
 }
-.nav-list a{
+
+.nav-list a {
     text-decoration: none;
-    color:#9c5224 ;
-    padding: 20px;
-    
+    color: #FAF6F0;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
 }
-.nav-list a:hover{
-    color: #e95b03;
-    
-    
+
+.nav-list a:hover {
+    color: #E58100;
 }
-/*fim da lista*/
 
-/*inicio da primeira pagina*/
-
-
-
+/* PÁGINA INICIAL */
 
 .titulo {
     width: 100%;
-    min-height: 550px;
+    min-height: 600px;
     padding: 70px 7.5%;
     background: linear-gradient(110deg, #160F0B, #2B1B14);
     display: flex;
@@ -67,8 +81,6 @@ h1 {
     justify-content: space-between;
     gap: 50px;
 }
-
-
 
 .hero-conteudo {
     flex: 1;
@@ -100,9 +112,7 @@ h1 {
     max-width: 500px;
 }
 
-
-
-.titulo .botaoo {
+.botaoo {
     display: inline-block;
     background-color: #E58100;
     color: white;
@@ -111,17 +121,13 @@ h1 {
     text-decoration: none;
     font-size: 15px;
     font-weight: bold;
-    border: none;
-    cursor: pointer;
     transition: 0.3s;
 }
 
-.titulo .botao:hover {
+.botaoo:hover {
     background-color: #C85C12;
     transform: translateY(-3px);
 }
-
-
 
 .hero-imagem {
     flex: 1.3;
@@ -131,27 +137,204 @@ h1 {
 }
 
 .hero-imagem img {
-    display: block;
     width: 100%;
     max-width: 650px;
     height: auto;
     object-fit: contain;
     border-radius: 18px;
-    margin: 0;
 }
 
+/* CARDÁPIO */
 
+.cardapio {
+    width: 100%;
+    background-color: #FAF6F0;
+    padding: 70px 5% 90px;
+    text-align: center;
+}
 
+.titulo-cardapio {
+    color: #2B1B14;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
 
-a{
+.subtitulo-cardapio {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 55px;
+}
+
+.container-cards {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.cardapio .card {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #2B1B17;
+    border-radius: 12px;
+    background-color: #222222;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.cardapio .card:hover {
+    transform: translateY(-8px);
+    border-color: #E58100;
+}
+
+.cardapio .card img {
+    width: 100%;
+    height: 190px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cardapio .card h2 {
+    color: #FAF6F0;
+    font-size: 23px;
+}
+
+.botao-cardapio {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 14px 35px;
+    background-color: #E58100;
+    color: white;
+    border-radius: 7px;
     text-decoration: none;
-    color: #fcfbfb;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.logo{
-    margin-right: 1400px;
-    width: 80px;
-    height: 80px;
+.botao-cardapio:hover {
+    background-color: #C85C12;
+    transform: translateY(-3px);
+}
+
+/* QUEM SOMOS */
+
+.informacoes {
+    width: 100%;
+    padding: 90px 8%;
+    background-color: #2B1B14;
+}
+
+.informacoes-conteudo {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+}
+
+.informacoes-texto {
+    flex: 1;
+}
+
+.informacoes-texto h2 {
+    color: #FAF6F0;
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.informacoes-texto p {
+    color: #D1C7BD;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.informacoes-imagem {
+    flex: 1;
+}
+
+.informacoes-imagem img {
+    width: 100%;
+    max-width: 550px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    width: 100%;
+    background-color: #0D0907;
+    color: white;
+    padding: 55px 7%;
+}
+
+.rodape-conteudo {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.rodape-marca {
+    border-left: 3px solid #E76F20;
+    padding-left: 25px;
+    flex: 1;
+}
+
+.rodape-marca h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.rodape-marca h2 span {
+    color: #E76F20;
+}
+
+.rodape-marca .subtitulo {
+    color: #E76F20;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.rodape-marca p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.rodape-marca small {
+    display: block;
+    margin-top: 18px;
+    color: #999;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.rodape-atendimento {
+    flex: 1;
+}
+
+.rodape-atendimento h3 {
+    color: #E76F20;
+    font-size: 17px;
+    margin-bottom: 22px;
+}
+
+.rodape-atendimento p {
+    color: #DDD;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
 }
 
 /*fim da primeira pagina*/
@@ -236,105 +419,8 @@ a{
 }
 /*fim das informações*/
 
-/*começo rodape*/
-
-.rodape {
-    width: 100%;
-    background: #0d0907;
-    color: #ffffff;
-    padding: 55px 0;
-    box-sizing: border-box;
-}
-
-.rodape-conteudo {
-    width: 75%;
-    max-width: 1100px;
-    margin: 0 auto;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    gap: 150px;
-}
 
 
-
-
-.rodape-marca {
-    border-left: 3px solid #e76f20;
-    padding-left: 25px;
-    flex: 1;
-}
-
-.rodape-marca h2 {
-    margin: 0 0 5px;
-
-    font-size: 30px;
-    font-weight: bold;
-    
-}
-
-.rodape-marca h2 span {
-    color: #e76f20;
-}
-
-.rodape-marca .subtitulo {
-    margin: 0 0 15px;
-
-    color: #e76f20;
-
-    font-size: 13px;
-    
-    font-weight: bold;
-}
-
-.rodape-marca p {
-    margin: 8px 0;
-
-    font-size: 16px;
-}
-
-.rodape-marca small {
-    display: block;
-
-    margin-top: 18px;
-
-    color: #999;
-
-    font-size: 13px;
-    
-}
-p {
-    font-size: 20px;
-}
-
-
-
-.rodape-atendimento {
-    flex: 1;
-    padding-left: 20px;
-}
-
-.rodape-atendimento h3 {
-    margin: 0 0 22px;
-
-    color: #e76f20;
-
-    font-size: 17px;
-    
-}
-
-.rodape-atendimento p {
-    margin: 0 0 15px;
-
-    color: #ddd;
-
-    font-size: 14px;
-    
-}
-
-/*fim rodape*/
 
 /*login*/
 body {
@@ -615,167 +701,104 @@ input {
 
 /*responsividade*/
 
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
-
-body {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-}
 
 
+@media screen and (max-width: 1100px) {
 
-@media screen and (max-width: 1024px) {
-
-   
+    /* MENU */
 
     .nav {
-        width: 100%;
-        height: auto;
-        min-height: 80px;
-        justify-content: space-between;
-        align-items: center;
+        padding: 0 4%;
     }
 
-    .logo {
-        width: 75px;
-        height: 75px;
-        margin: 0 20px;
+    .logo-link {
+        transform: translateX(-35px);
     }
 
     .nav-list {
-        margin-right: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 25px;
     }
 
-    .nav-list a {
-        padding: 12px;
-    }
-
-    
+    /* PÁGINA INICIAL */
 
     .titulo {
-        width: 100%;
-        height: auto;
-        min-height: 0;
-        padding: 35px 15px 20px;
-        text-align: center;
+        padding: 60px 5%;
+        gap: 30px;
     }
-    
+
     .titulo h1 {
-        font-size: 30px;
-        margin: 0;
-    }
-    
-    .titulo i {
-        font-size: 16px;
-        margin: 20px 0;
-    }
-    
-    .titulo img {
-        display: block;
-        width: 100%;
-        max-width: 450px;
-        height: auto;
-        margin: 20px auto 0;
+        font-size: 46px;
     }
 
-    .botao {
-        margin: 15px auto;
+    .hero-imagem img {
+        max-width: 550px;
     }
 
-   
+    /* CARDÁPIO */
 
-    @media (max-width: 1100px) {
-        .container-cards {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .container-cards {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .container-cards {
-            grid-template-columns: 1fr;
-        }
-    
-        .titulo-cardapio {
-            font-size: 30px;
-            margin-bottom: 40px;
-        }
+    .container-cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    
-
-    .rodape-conteudo {
-        width: 90%;
-        gap: 40px;
+    .cardapio .card img {
+        height: 180px;
     }
 
-    
 
-    .cards-3 {
-        max-width: 800px;
-        margin: 30px auto;
-        gap: 20px;
+
+    .informacoes-conteudo {
+        gap: 35px;
     }
 
-    .card-3 {
-        width: 230px;
+    .informacoes-imagem img {
+        height: 350px;
+    }
+
+    .informações h2 {
+        margin-left: 0;
+    }
+
+    .informações p {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .img-2 {
+        margin-left: 0;
+        margin-top: 20px;
+        max-width: 100%;
     }
 
 }
 
 
+/*tablet*/
 
 @media screen and (max-width: 768px) {
 
-   
+    /* MENU */
 
     .nav {
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        padding: 10px;
+        padding: 15px;
         gap: 10px;
     }
 
+    .logo-link {
+        transform: none;
+    }
+
     .logo {
-        width: 65px;
-        height: 65px;
-        margin: 0 auto;
+        width: 70px;
+        height: 70px;
     }
 
     .nav-list {
         width: 100%;
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        gap: 5px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .nav-list li {
-        list-style: none;
+        gap: 8px;
     }
 
     .nav-list a {
@@ -784,101 +807,151 @@ img {
         font-size: 14px;
     }
 
-   
+
+    /* PÁGINA INICIAL */
 
     .titulo {
         width: 100%;
-        min-height: 400px;
-        height: auto;
-        padding: 45px 15px;
+        min-height: auto;
+        flex-direction: column;
+        justify-content: center;
         text-align: center;
+        padding: 55px 25px;
+        gap: 35px;
+    }
+
+    .hero-conteudo {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .destaque {
+        font-size: 12px;
+        letter-spacing: 2px;
     }
 
     .titulo h1 {
-        font-size: 30px;
-        margin: 0;
+        font-size: 40px;
+        line-height: 1.2;
     }
 
-    .titulo i {
-        font-size: 16px;
-        margin: 20px 0;
-    }
-
-    .titulo img {
+    .titulo p {
         width: 100%;
-        max-width: 450px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 15px;
+    }
+
+    .hero-imagem {
+        width: 100%;
+    }
+
+    .hero-imagem img {
+        width: 100%;
+        max-width: 500px;
         height: auto;
-        margin: 20px auto;
     }
 
-    .botao {
-        display: inline-block;
-        margin: 15px auto;
-        padding: 12px;
-        font-size: 16px;
-    }
 
-   
+    /* CARDÁPIO */
 
     .cardapio {
+        width: 100%;
+        padding: 55px 25px;
+    }
+
+    .container-cards {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .cardapio .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .cardapio .card img {
+        height: 170px;
+    }
+
+    .cardapio .card h2 {
+        font-size: 20px;
+    }
+
+    .titulo-cardapio {
+        font-size: 34px;
+        margin-bottom: 30px;
+    }
+
+
+     
+
+    .informacoes {
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+    .informacoes-conteudo {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-        padding: 30px 15px;
+        gap: 30px;
     }
 
-    .cardapio > h2 {
+    .informacoes-texto {
         width: 100%;
-        font-size: 28px;
-        margin: 15px 0;
         text-align: center;
     }
 
-    .card {
-        width: 90%;
-        max-width: 350px;
-        margin: 10px auto;
-        padding: 20px;
+    .informacoes-texto h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
     }
 
-    #card-1 {
-        margin-left: auto;
-    }
-
-    .card .img {
-        display: block;
+    .informacoes-texto p {
         width: 100%;
-        height: 200px;
-        margin: 0 auto;
+        max-width: 600px;
+        margin: 0 auto 18px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .informacoes-imagem {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .informacoes-imagem img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
         object-fit: cover;
     }
 
-    .card h2 {
-        margin: 15px 0;
-        text-align: center;
-    }
 
-    
+
 
     .informações {
         width: 100%;
-        padding: 30px 15px;
+        padding: 50px 20px;
         text-align: center;
     }
 
     .informações h2 {
-        font-size: 28px;
-        margin: 20px 0;
+        margin: 0 0 25px;
+        font-size: 32px;
     }
 
     .informações p {
         width: 100%;
-        margin: 15px auto;
+        max-width: 600px;
+        margin: 0 auto 18px;
         font-size: 15px;
         line-height: 1.7;
-        text-align: center;
     }
 
     .img-2 {
@@ -886,73 +959,18 @@ img {
         width: 100%;
         max-width: 400px;
         height: auto;
-        margin: 25px auto;
-    }
-
-    
-
-    .pedidos {
-        width: 100%;
-        padding: 35px 15px;
-    }
-
-    .pedidos h2 {
-        font-size: 27px;
-    }
-
-    .cards-3 {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-        margin: 30px auto;
-    }
-
-    .card-3 {
-        width: 90%;
-        max-width: 350px;
-        min-height: 420px;
-        margin: 0 auto;
-        padding: 15px;
-    }
-
-    .card-3 img {
-        width: 100%;
-        height: 200px;
-        margin: 0 auto 15px;
+        margin: 25px auto 0;
         object-fit: cover;
     }
 
-    .card-3 form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: auto;
-    }
 
-    .card-3 input[type="number"] {
-        width: 100%;
-        max-width: 250px;
-    }
-
-    .botao11 {
-        width: 100%;
-        max-width: 180px;
-        margin: 10px auto;
-    }
-
-    
+    /* RODAPÉ */
 
     .rodape {
-        width: 100%;
-        padding: 35px 15px;
+        padding: 45px 25px;
     }
 
     .rodape-conteudo {
-        width: 100%;
-        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -961,217 +979,467 @@ img {
 
     .rodape-marca {
         width: 100%;
-        padding: 0 10px;
-        text-align: center;
         border-left: none;
+        padding-left: 0;
     }
 
     .rodape-atendimento {
         width: 100%;
-        padding: 0;
-        text-align: center;
     }
 
-    
+
+    /* LOGIN E CADASTRO */
+
+    body:has(.caixa-login) {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 15px;
+    }
 
     .caixa-login {
-        width: 90%;
-        max-width: 400px;
-        margin: 40px auto;
-        padding: 25px;
+        width: 100%;
+        max-width: 420px;
+        margin: 20px auto;
+        padding: 30px 25px;
+    }
+
+    .caixa-login h1 {
+        font-size: 26px;
+    }
+
+    .caixa-login form {
+        width: 100%;
+    }
+
+    .caixa-login input {
+        width: 100%;
+        min-height: 42px;
+    }
+
+    .caixa-login button {
+        width: 100%;
+    }
+
+    .caixa-login .voltar {
+        position: static !important;
+        display: block !important;
+        margin-top: 20px !important;
+        padding: 10px !important;
+        background: transparent !important;
+        color: #E58100 !important;
+        transform: none !important;
+    }
+
+
+    /* PEDIDOS */
+
+    .pedidos {
+        width: 100%;
+        padding: 45px 20px;
+    }
+
+    .pedidos h2 {
+        font-size: 29px;
+    }
+
+    .pedidos > p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .cards-3 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card-3 {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .card-3 img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .card-3 h3 {
+        font-size: 20px;
+    }
+
+    .card-3 p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .card-3 h4 {
+        font-size: 19px;
+    }
+
+    .card-3 input[type="number"] {
+        width: 100%;
+        min-height: 40px;
+    }
+
+    .card-3 .botao11 {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* VOLTAR NOS PEDIDOS */
+
+    body > .voltar {
+        position: static !important;
+        display: inline-block !important;
+        margin: 15px !important;
+        padding: 10px 15px !important;
     }
 
 }
 
 
+/* celular */
 
 @media screen and (max-width: 480px) {
 
-   
+    /* MENU */
 
-    .nav-list {
-        gap: 0;
-    }
-
-    .nav-list a {
-        font-size: 13px;
-        padding: 8px;
-    }
-
-   
-
-    .titulo {
-        padding: 35px 10px;
-    }
-
-    .titulo h1 {
-        font-size: 25px;
-    }
-
-    .titulo i {
-        font-size: 14px;
-    }
-
-    
-
-    .cardapio > h2 {
-        font-size: 25px;
-    }
-
-    .card {
-        width: 95%;
-    }
-
-    
-
-    .pedidos {
-        padding: 30px 10px;
-    }
-
-    .pedidos h2 {
-        font-size: 23px;
-    }
-
-    .pedidos p {
-        font-size: 14px;
-    }
-
-    .card-3 {
-        width: 95%;
-        min-height: 400px;
-    }
-
-    .card-3 img {
-        height: 180px;
-    }
-
-    .botao11 {
-        font-size: 14px;
+    .nav {
         padding: 10px;
     }
 
-   
+    .logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    .nav-list {
+        gap: 3px;
+    }
+
+    .nav-list a {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+
+    /* PÁGINA INICIAL */
+
+    .titulo {
+        padding: 45px 18px;
+        gap: 30px;
+    }
+
+    .titulo h1 {
+        font-size: 32px;
+    }
+
+    .titulo p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .destaque {
+        font-size: 11px;
+    }
+
+    .hero-imagem img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+
+    /* CARDÁPIO */
+
+    .cardapio {
+        padding: 45px 18px;
+    }
+
+    .titulo-cardapio {
+        font-size: 30px;
+    }
+
+    .subtitulo-cardapio {
+        font-size: 14px;
+        margin-bottom: 35px;
+    }
+
+    .container-cards {
+        width: 100%;
+        max-width: 350px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cardapio .card {
+        width: 100%;
+    }
+
+    .cardapio .card img {
+        height: 200px;
+    }
+
+    .cardapio .card h2 {
+        font-size: 21px;
+    }
+
+    .botao-cardapio {
+        margin-top: 35px;
+    }
+
+
+    /* QUEM SOMOS */
+
+    .informacoes {
+        padding: 45px 20px;
+    }
+
+    .informacoes-conteudo {
+        gap: 25px;
+    }
+
+    .informacoes-texto h2 {
+        font-size: 28px;
+    }
+
+    .informacoes-texto p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .informacoes-imagem img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    
+
+    .informações {
+        padding: 45px 20px;
+    }
 
     .informações h2 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .informações p {
         font-size: 14px;
+        line-height: 1.7;
     }
 
-    
+    .img-2 {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+
+    /* RODAPÉ */
+
+    .rodape {
+        padding: 40px 20px;
+    }
+
+    .rodape-conteudo {
+        gap: 30px;
+    }
 
     .rodape-marca h2 {
-        font-size: 24px;
+        font-size: 25px;
+    }
+
+    .rodape-marca p,
+    .rodape-atendimento p {
+        font-size: 13px;
     }
 
     .rodape-atendimento h3 {
         font-size: 16px;
     }
 
-    
+
+    /* LOGIN E CADASTRO */
+
+    body:has(.caixa-login) {
+        padding: 20px 12px;
+    }
 
     .caixa-login {
-        width: 92%;
-        padding: 20px 15px;
+        width: 100%;
+        max-width: 360px;
+        margin: 15px auto;
+        padding: 25px 20px;
     }
 
-    @media (max-width: 768px) {
-
-        .voltar {
-            position: relative;
-            top: auto;
-            left: auto;
-    
-            margin: 15px;
-            padding: 10px 15px;
-    
-            font-size: 14px;
-        }
-    
-    }
-    
-    @media (max-width: 480px) {
-    
-        .voltar {
-            font-size: 13px;
-            padding: 9px 12px;
-        }
-    
+    .caixa-login h1 {
+        font-size: 23px;
     }
 
-    @media (max-width: 768px) {
-        .voltar {
-            position: relative;
-            top: auto;
-            left: auto;
-            margin: 15px;
-        }
-        }
-        @media (max-width: 768px) {
-            .voltar {
-                position: relative !important;
-                top: auto !important;
-                left: auto !important;
-                margin: 15px !important;
-            }
-        }
-        @media screen and (max-width: 480px) {
-            .titulo {
-                height: auto;
-                min-height: 0;
-                padding-bottom: 20px;
-            }
-        }
+    .caixa-login p {
+        font-size: 14px;
+        line-height: 1.5;
     }
-    @media screen and (max-width: 768px) {
 
-        .titulo {
-            flex-direction: column;
-            text-align: center;
-            padding: 55px 20px;
-            gap: 35px;
-        }
-    
-        .titulo h1 {
-            font-size: 40px;
-        }
-    
-        .titulo p {
-            font-size: 15px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    
-        .hero-imagem img {
-            max-width: 500px;
-            height: 280px;
-        }
+    .caixa-login label {
+        font-size: 14px;
     }
-    
-    
-    
-    @media screen and (max-width: 480px) {
-    
-        .titulo {
-            padding: 45px 15px;
-        }
-    
-        .titulo h1 {
-            font-size: 32px;
-        }
-    
-        .titulo p {
-            font-size: 14px;
-        }
-    
-        .hero-imagem img {
-            height: 220px;
-        }
-    
-        .titulo .botao {
-            padding: 13px 22px;
-            font-size: 14px;
-        }
+
+    .caixa-login input {
+        padding: 11px;
+        font-size: 14px;
     }
+
+    .caixa-login button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+
+    /* PEDIDOS */
+
+    .pedidos {
+        padding: 40px 15px;
+    }
+
+    .pedidos h2 {
+        font-size: 25px;
+    }
+
+    .pedidos > p {
+        font-size: 14px;
+    }
+
+    .cards-3 {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        max-width: 350px;
+        margin: 25px auto 0;
+    }
+
+    .card-3 {
+        width: 100%;
+        max-width: 350px;
+        padding: 15px;
+    }
+
+    .card-3 img {
+        height: 200px;
+    }
+
+    .card-3 h3 {
+        font-size: 21px;
+    }
+
+    .card-3 p {
+        font-size: 14px;
+    }
+
+    .card-3 h4 {
+        font-size: 20px;
+    }
+
+    .card-3 input[type="number"] {
+        font-size: 14px;
+    }
+
+    .card-3 .botao11 {
+        font-size: 14px;
+    }
+
+
+    /* BOTÃO VOLTAR */
+
+    body > .voltar {
+        margin: 12px !important;
+        padding: 10px 14px !important;
+        font-size: 14px !important;
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .informacoes {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .informacoes-conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 25px;
+    }
+
+    .informacoes-texto {
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+        text-align: center;
+    }
+
+    .informacoes-texto h2 {
+        font-size: 30px;
+    }
+
+    .informacoes-texto p {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 18px;
+        line-height: 1.7;
+    }
+
+    .informacoes-imagem {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex: none;
+    }
+
+    .informacoes-imagem img {
+        display: block;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+
+    .informacoes {
+        padding: 40px 18px;
+    }
+
+    .informacoes-texto h2 {
+        font-size: 28px;
+    }
+
+    .informacoes-texto p {
+        font-size: 14px;
+    }
+
+    .informacoes-imagem img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+}

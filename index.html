@@ -1,166 +1,287 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburgueria Artesanal</title>
-    <link rel="stylesheet" href="style.css">
-    <!--inicio do menu-->
+
+    <meta name="description" content="Sabor & Brasa: hambúrgueres artesanais preparados com ingredientes frescos e muito sabor. Conheça nosso cardápio!">
+
+    <title>Sabor & Brasa | Hambúrguer Artesanal</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./script.js" defer></script>
+
+    <link
+    rel="preload"
+    as="image"
+    href="./img/segundaimg.png"
+    fetchpriority="high"
+>
 </head>
+
 <body>
-    <script src="script.js"></script>
+
+    <!-- MENU -->
     <header id="header">
 
         <nav class="nav">
-           <img src="./img/logo.png" alt="" class="logo">
-           
-            <ul class="nav-list">
-                <li>
-                    <a href="#Home">Home</li></a>
-                <a href="#Cardápio">Cardápio<li></li></a>
-                <a href="#Informações">Informações<li></li></a>
-                <a href="login.html">Login</li></a>
-            </ul>
 
-    </nav>
-
-</header>
-
-<!--fim do menu-->
-
-<!--inicio da pagina inicial-->
-
-
-<main>
-
-    <section class="titulo" id="Home">
-
-        <div class="hero-conteudo">
-
-            <span class="destaque">HAMBÚRGUER ARTESANAL</span>
-
-            <h1>
-                Sabor que marca.<br>
-                Brasa que conquista.
-            </h1>
-
-            <p>
-                Venha conhecer nossa hamburgueria e se apaixonar
-                pelo sabor de cada mordida!
-            </p>
-
-            <a href="pedidos.html" class="botaoo">
-                Faça seu pedido!
+            <a href="#Home" class="logo-link">
+                <img
+                    src="./img/logo.png"
+                    alt="Logo Sabor & Brasa"
+                    class="logo"
+                    width="80"
+                    height="80"
+                    decoding="async"
+                >
             </a>
 
-        </div>
+            <ul class="nav-list">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Cardapio">Cardápio</a></li>
+                <li><a href="#Informacoes">Informações</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
 
-        <div class="hero-imagem">
+        </nav>
 
-            <img
-                src="./img/terceiraimg.png"
-                alt="Hambúrguer Sabor & Brasa">
+    </header>
 
-        </div>
-
-    </section>
-
-</main>
-
-    
-</main>
-    <!--fim da pagina inicial-->
-
-    <!--Inicio do cardapio-->
-
+    <!-- PÁGINA INICIAL -->
     <main>
-        <section class="cardapio" id="Cardápio">
-    
-            <p class="titulo-cardapio">Cardápio</p>
-    
-            <div class="container-cards">
-    
-                <article class="card">
-                    <img class="img" src="./img/xsalada.png" alt="X-Salada">
-                    <h2>X-salada</h2>
-                </article>
-    
-                <article class="card">
-                    <img class="img" src="./img/x-senac.png" alt="X-Senac">
-                    <h2>X-Senac</h2>
-                </article>
-    
-                <article class="card">
-                    <img class="img" src="./img/batata.png" alt="Fritas">
-                    <h2>Fritas</h2>
-                </article>
-    
-                <article class="card">
-                    <img class="img" src="./img/x-bacon.png" alt="X-Bacon">
-                    <h2>X-bacon</h2>
-                </article>
-    
-                <article class="card">
-                    <img class="img" src="./img/classico.png" alt="Clássico">
-                    <h2>Clássico</h2>
-                </article>
-    
+
+        <section class="titulo" id="Home">
+
+            <div class="hero-conteudo">
+
+                <span class="destaque">HAMBÚRGUER ARTESANAL</span>
+
+                <h1>
+                    Sabor que marca.
+                    <br>
+                    Brasa que conquista.
+                </h1>
+
+                <p>
+                    Venha conhecer nossa hamburgueria e se apaixonar
+                    pelo sabor de cada mordida!
+                </p>
+
+                <a href="pedidos.html" class="botaoo">
+                    Faça seu pedido!
+                </a>
+
             </div>
-    
+
+            <div class="hero-imagem">
+
+                <img
+                    src="./img/segundaimg.png"
+                    alt="Hambúrguer artesanal Sabor & Brasa"
+                    width="650"
+                    height="430"
+                    fetchpriority="high"
+                    decoding="async"
+                >
+
+            </div>
+
         </section>
-    </main>
-    
-<!--Fim do cardapio-->
 
-<!--inicio da informações-->
-<main>
-    <section class="informações" id="Informações">
-        <div>
-            <h2>Quem  somos</h2>
-            <p>A sabor & brasa surgiu de uma vontade de fazer o melhor hamburguer da região. <br>Começando apenas em um trailer simples de rua, 
-                 <br>conseguimos crescer e compartilhar o amor e carinho que temos na criação de nossos 
-                lanches. <br>Hoje são 20 lojas espalhadas pelo Brasil, com uma experiência incrível e refeições perfeitas.
-                 <br>Amamos o que fazemos e somos focados em oferecer a melhor qualidade,<br>com ingredientes frescos e uma receita preparada como só a gente sabe!
+        <!-- CARDÁPIO -->
+        <section class="cardapio" id="Cardapio">
+
+            <h2 class="titulo-cardapio">Nosso Cardápio</h2>
+
+            <p class="subtitulo-cardapio">
+                Conheça algumas das nossas especialidades
             </p>
-           <img class="img-2" src="./img/cd10aaee-e321-413d-9684-d0d0b673081e.png" alt="">
-           
+
+            <div class="container-cards">
+
+                <article class="card">
+
+                    <img
+                        src="./img/xsalada.png"
+                        alt="X-Salada"
+                        width="400"
+                        height="300"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h2>X-Salada</h2>
+
+                </article>
+
+                <article class="card">
+
+                    <img
+                        src="./img/x-senac.png"
+                        alt="X-Senac"
+                        width="400"
+                        height="300"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h2>X-Senac</h2>
+
+                </article>
+
+                <article class="card">
+
+                    <img
+                        src="./img/batata.png"
+                        alt="Batata frita"
+                        width="400"
+                        height="300"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h2>Fritas</h2>
+
+                </article>
+
+                <article class="card">
+
+                    <img
+                        src="./img/x-bacon.png"
+                        alt="X-Bacon"
+                        width="400"
+                        height="300"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h2>X-Bacon</h2>
+
+                </article>
+
+                <article class="card">
+
+                    <img
+                        src="./img/classico.png"
+                        alt="Hambúrguer clássico"
+                        width="400"
+                        height="300"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <h2>Clássico</h2>
+
+                </article>
+
+            </div>
+
+            <a href="pedidos.html" class="botao-cardapio">
+                Ver pedidos
+            </a>
+
+        </section>
+
+        <!-- QUEM SOMOS -->
+        <section class="informacoes" id="Informacoes">
+
+            <div class="informacoes-conteudo">
+
+                <div class="informacoes-texto">
+
+                    <span class="destaque">NOSSA HISTÓRIA</span>
+
+                    <h2>Quem somos?</h2>
+
+                    <p>
+                        A Sabor & Brasa surgiu de uma vontade de fazer
+                        o melhor hambúrguer da região.
+                    </p>
+
+                    <p>
+                        Começando apenas em um trailer simples de rua,
+                        conseguimos crescer e compartilhar o amor e
+                        carinho que temos na criação de nossos lanches.
+                    </p>
+
+                    <p>
+                        Hoje são 20 lojas espalhadas pelo Brasil,
+                        com uma experiência incrível e refeições perfeitas.
+                    </p>
+
+                    <p>
+                        Amamos o que fazemos e somos focados em oferecer
+                        a melhor qualidade, com ingredientes frescos e
+                        receitas preparadas como só a gente sabe!
+                    </p>
+
+                </div>
+
+                <div class="informacoes-imagem">
+
+                    <img
+                        src="./img/cd10aaee-e321-413d-9684-d0d0b673081e.png"
+                        alt="Conheça a Sabor & Brasa"
+                        width="550"
+                        height="400"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+
+                <h2>SABOR <span>& BRASA</span></h2>
+
+                <p class="subtitulo">Hambúrguer artesanal</p>
+
+                <p class="texto">
+                    Sabor, qualidade e muita brasa!
+                </p>
+
+                <small>
+                    Feito com carinho para transformar
+                    <br>
+                    cada lanche em uma experiência especial.
+                </small>
+
+            </div>
+
+            <div class="rodape-atendimento">
+
+                <h3>ATENDIMENTO</h3>
+
+                <p>
+                    📍 Rua Paineiras, 1300 – Jardim Eldorado
+                    <br>
+                    Contagem - MG
+                </p>
+
+                <p>📞 (31) 99999-9999</p>
+
+                <p>✉ contato@saborebrasa.com</p>
+
+            </div>
+
         </div>
 
-    </section>
-</main>
-<!--Fim das Informações-->
-
-<!--Inicio do radape-->
-<footer class="rodape">
-
-    <div class="rodape-conteudo">
-
-        <div class="rodape-marca">
-            <h2>SABOR & BRASA</h2>
-            <p class="subtitulo">Hambúrguer artesanal</p>
-            <p class="texto"> Sabor, qualidade e muita brasa!</p>
-
-            <small>
-                Feito com carinho para transformar<br>
-                cada lanche em uma experiência especial.
-            </small>
-        </div>
-
-        <div class="rodape-atendimento">
-            <h3>ATENDIMENTO</h3>
-
-            <p>📍 Rua Paineiras, 1300 – Jardim Eldorado<br>
-        Contagem - MG</p>
-
-            <p>📞 (31) 99999-9999</p>
-
-            <p>✉ contato@saborebrasa.com</p>
-        </div>
-
-    </div>
-
-</footer>
- <!--Fim do rodape-->
+    </footer>
 
 </body>
 </html>
